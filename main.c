@@ -24,12 +24,42 @@ int main(int argc, char **argv){
 
 	//Los resultados de sus calculos van en estas variables.
 	//Puede declarar más variables si lo necesita.
+	
+	 
+	char peso[100]={0};
+	char altura[100]={0};
+	if (argc==0){
+	printf("Número de personas invalido\n");
+	
+	}
+		int i=0;
+	while(i<elementos){
+		printf("Peso: ");
+		fgets(peso,10,stdin);
+		float valor=atof(peso);
+		printf("Altura: ");
+		fgets(altura,10,stdin);
+		i++;
+	};
+	
 	float sum = 0.0f;
 	float max_imc = 0.0f;
+	float imcAll[elementos];
+	for(int i;i<elementos;i++){
+		float valor1=atof(peso[i]);
+		float valor2=atof(altura[i]);
+		float imc=valor1/(valor2*valor2);
+	}
+	float nma=0.0;
+	 for(int i;i<elementos;i++){
+	 sum+=imcAll[i];
+	if(imcAll[i]>nma)
+	nma=imcAll[i];
+	  };
+	  
+	  sum = sum/elementos;
 	
-	
-	
-	
+	max_imc=nma;
 	//No modifique estas lineas
 	//Guarde los resultados en las 
 	//variables sum y max_imc
